@@ -3,9 +3,9 @@ package guru.springframework.zipengpetclinic.services.map;
 import java.util.Set;
 
 import guru.springframework.zipengpetclinic.model.Vet;
-import guru.springframework.zipengpetclinic.services.CrudService;
+import guru.springframework.zipengpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
