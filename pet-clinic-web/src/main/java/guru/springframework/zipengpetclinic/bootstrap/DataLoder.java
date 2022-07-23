@@ -7,8 +7,6 @@ import guru.springframework.zipengpetclinic.model.Owner;
 import guru.springframework.zipengpetclinic.model.Vet;
 import guru.springframework.zipengpetclinic.services.OwnerService;
 import guru.springframework.zipengpetclinic.services.VetService;
-import guru.springframework.zipengpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.zipengpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoder implements CommandLineRunner {
@@ -17,9 +15,9 @@ public class DataLoder implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoder() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoder(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
